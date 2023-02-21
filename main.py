@@ -255,5 +255,9 @@ def triga(msg):
     bot.send_message(msg.chat.id, 'Какая картинка соответствует первой?', reply_markup=mup)
     bot.register_next_step_handler(msg, triga)
 
+def main():
+    bot.polling()
+    
+if __name__ == '__main__':
+    main()
 
-bot.polling()
