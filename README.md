@@ -2,7 +2,7 @@
 
 ### The essence of the program
 Telegram bot, that helps to prepair for United State Exam in Mathematics and Russian language. Uses SQLite3.
-Sends theory files, creates test for cheking knowledges in accents, trigonometric formulas.
+Sends theory files, creates tests for cheking knowledges in accents, trigonometric formulas.
 
 ### File Description
 * **main.py** - The main program file. 
