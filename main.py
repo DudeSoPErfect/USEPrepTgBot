@@ -8,7 +8,7 @@ import sqlite3 as sql
 import random
 from telebot import types
 
-TOKEN = "1886363237:AAG0lQ7eorY6FrMKp-wqlzFBzsQwUMmYZes"
+TOKEN = "/Your token/"
 bot = telebot.TeleBot(TOKEN)
 start = 's'  # команда для старта
 
@@ -76,9 +76,7 @@ def russkiy(msg):
     text = msg.text
     if text == 'Ударения':
         markup = telebot.types.ReplyKeyboardRemove(selective=False)
-        # bot.send_message(msg.chat.id, 'К сожалению, это находиться в стадии разработки:(', reply_markup=markup)
 
-        # making pool
 
         pool = get_content_from_udarenia()
         exercise = pool[random.randint(0, len(pool) - 1)]
@@ -143,7 +141,7 @@ def next_step(msg):
 
 
 def get_content_from_udarenia():
-    # открываем файлик db
+
     with sql.connect("udar.db") as con:
         cur = con.cursor()
         cur.execute("CREATE TABLE IF NOT EXISTS base0("
@@ -158,7 +156,7 @@ def get_content_from_udarenia():
     return data
 
 
-# создаем клаву с вариантами ответов
+
 def make_variants_clav(word):
     word = word.lower()
     arr = []
@@ -191,7 +189,7 @@ def udarenia(msg):
     for i in pool:
         if msg.text.lower() == i[0]:
             answer = i
-    # если по ответу не нашли вопрос
+
     if answer == '':
         exercise = pool[random.randint(0, len(pool) - 1)]
 
