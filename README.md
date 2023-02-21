@@ -9,11 +9,11 @@ Sends Theory files, creates test for cheking in knowledges in accents, trigonome
 Calls functions from other files, main logic is based here.
 * **paronimy_data_base.py** - Auxiliary program file.
 Contains paronims to generate appropriate tests.
-* **udar.db** data program file.
+* **udar.db** - data program file.
 Contains data and correct answers for accents test.
-* **Паронимы.docx** is a theory file.
+* **Паронимы.docx** - theory file.
 Contains a theory for the paronyms
-* **triga** is a folder consist of formulas images.
+* **triga** - folder consist of formulas images.
 Contains images of formulas to generate visually convenient formulas tests.
 
 ### How to launch
